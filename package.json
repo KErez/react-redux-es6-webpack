@@ -52,6 +52,7 @@
     "build:electron": "webpack --watch --display-error-details --config webpack.electron.config.js",
     "dev:web": "./node_modules/.bin/webpack-dev-server --content-base src/app --inline --hot",
     "dev:electron": "npm run build:electron & electron src/electron/main.js",
+    "dev:server": "node src/server/bin/www",
     "test": "mocha"
   },
   "author": "Kfir Erez",
