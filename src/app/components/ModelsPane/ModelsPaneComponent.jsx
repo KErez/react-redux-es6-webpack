@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import ModelsActions from './ModelsActions';
 import ModelsReducer from './ModelsReducer';
+import './ModelPane.sass';
 
 class ModelsPane extends React.Component {
   componentWillMount() {
@@ -11,11 +12,11 @@ class ModelsPane extends React.Component {
   
   render () {
     const { models } = this.props;
-    const modelsArrayView = models.map(m => <li key={m}>{m}...</li>);
-    return <div>
+    const modelsArrayView = models.map(m => <li className="ui-btn" key={m}>{m}...</li>);
+    return <selector>
       <h1>Models:</h1>
       <ul>{modelsArrayView}</ul>
-    </div>
+    </selector>
   }
 }
 
